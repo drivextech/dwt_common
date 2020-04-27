@@ -10,6 +10,12 @@
 #include "types/types.h"
 
 
+#ifdef __cplusplus
+namespace dxt_common {
+extern "C" {
+#endif
+
+
 typedef UINT64 dwt_time_counter_t;
 typedef INT64 dwt_time_counter_diff_t;
 
@@ -50,5 +56,10 @@ typedef struct _radio_cbers_t {
 #define DWT_TIME_COUNTER_LE(a, b)      (DWT_TIME_COUNTER_DIFF(a, b) <= 0)
 #define DWT_TIME_COUNTER_GE(a, b)      (DWT_TIME_COUNTER_DIFF(a, b) >= 0)
 
+
+#ifdef __cplusplus
+}
+}
+#endif
 
 #endif
