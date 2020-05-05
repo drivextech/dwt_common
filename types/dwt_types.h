@@ -41,12 +41,12 @@ typedef struct _radio_cbers_t {
 #define US_TO_DWT_TIME (499.2 * 128)
 #define DWT_TO_US_TIME (1.0 / 128 / 499.2)
 
-#define dwt_uus_to_us(_inst, dt) (dt * (65536.0 / 128.0 / 499.2))
-#define dwt_us_to_uus(_inst, dt) (dt * (128.0 * 499.2 / 65536.0))
-#define dwt_uus_to_dtu(_inst, dt) (dt * 65536.0)
-#define dwt_dtu_to_uus(_inst, dt) (dt / 65536.0)
-#define dwt_us_to_dtu(_inst, dt) (dt * 128.0 * 499.2)
-#define dwt_dtu_to_us(_inst, dt) (dt / 128.0 / 499.2)
+#define dwt_uus_to_us(_inst, dt) ((dt) * (65536.0 / 128.0 / 499.2))
+#define dwt_us_to_uus(_inst, dt) ((dt) * (128.0 * 499.2 / 65536.0))
+#define dwt_uus_to_dtu(_inst, dt) ((dt) * 65536.0)
+#define dwt_dtu_to_uus(_inst, dt) ((dt) / 65536.0)
+#define dwt_us_to_dtu(_inst, dt) ((dt) * 128.0 * 499.2)
+#define dwt_dtu_to_us(_inst, dt) ((dt) / 128.0 / 499.2)
 
 
 #define DWT_TIME_COUNTER_SUM(a, b)     ((dwt_time_counter_t)((a)+(b)))
